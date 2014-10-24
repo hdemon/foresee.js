@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>example</title>
+</head>
+<body>
+    <script src="../bower_components/ypromise/promise.js" type="text/javascript"></script>
+    <script src="../foresee.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        imageUrlArray = [];
+        for (i = 1; i < 31; i++) {
+            imageUrlArray.push("./" + i + ".png");
+        }
+
+        Foresee.sequentially(imageUrlArray).then(function(imgs) {
+            for (var i = 0, l = imgs.length; i < l; i++) {
+                document.body.appendChild(imgs[i]);
+            }
+        });
+    </script>
+</body>
+</html>
