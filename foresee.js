@@ -49,7 +49,7 @@
     });
   };
 
-  Foresee.parallel = function() {
+  Foresee.parallel = function(imageUrlArray) {
     var promises = [];
 
     for (var i = 0, l = imageUrlArray.length; i < l; i++) {
